@@ -1,0 +1,10 @@
+services:
+  demo-service:
+    container_name: demo-service
+    build:
+      context: .
+      dockerfile: src/main/docker/Dockerfile.native
+  mongo:
+    image: mongo:6.0.14-jammy
+    restart: always
+    container_name: mongo
